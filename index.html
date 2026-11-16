@@ -401,7 +401,7 @@ body{background:linear-gradient(180deg,#7ec4ea 0%,#d6effa 50%,#bfe49a 100%);back
 :root{--sun:#e07a1f}
 .scene img{object-position:50% 50%}
 .hero h1{color:#fff;-webkit-text-stroke:8px #3a2e4f;paint-order:stroke fill;text-shadow:0 4px 0 rgba(58,46,79,.5)}
-.hero .sub{color:#fff;-webkit-text-stroke:4px #3a2e4f;paint-order:stroke fill;font-weight:700}
+.hero .sub{color:#fff;-webkit-text-stroke:0;font-weight:700;text-shadow:-2px 0 #3a2e4f,2px 0 #3a2e4f,0 -2px #3a2e4f,0 2px #3a2e4f,-2px -2px #3a2e4f,2px -2px #3a2e4f,-2px 2px #3a2e4f,2px 2px #3a2e4f,0 3px 0 #3a2e4f}
 .hero h1 small{-webkit-text-stroke:0}
 </style>
 </head>
@@ -1416,6 +1416,7 @@ function dashiParade(host){
 // --- タイトル画面の かざり（ときどき メロンが のぼる）---
 let ambTimer=null;
 function startAmbient(){
+  return; // 鉾田市版：タイトル画面のメロンの演出はなし
   if(REDUCE||ambTimer) return;
   const host=document.getElementById('sky'); if(!host) return;
   const run=()=>{
